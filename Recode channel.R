@@ -1,0 +1,1 @@
+cha_num <- recode(tmsalary$channel, "'Independent'=1; 'Internet'=2; 'Mall'=3;", as.factor.result=FALSE)
