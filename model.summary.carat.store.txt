@@ -1,0 +1,20 @@
+
+Call:
+lm(formula = tmx$price ~ tmx$carat + tmx$store_num)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-8935.6 -1212.6  -149.6   859.8 12325.6 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   -3636.11     341.21 -10.657   <2e-16 ***
+tmx$carat      9325.28     250.07  37.290   <2e-16 ***
+tmx$store_num    78.30      37.35   2.096   0.0366 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2089 on 422 degrees of freedom
+Multiple R-squared:  0.7761,	Adjusted R-squared:  0.775 
+F-statistic: 731.3 on 2 and 422 DF,  p-value: < 2.2e-16
+
