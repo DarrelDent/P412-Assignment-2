@@ -1,0 +1,36 @@
+
+Call:
+lm(formula = price ~ carat + color + clarity + cut + channel + 
+    store, data = train.tmsalary)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6596.8  -605.8  -137.4   593.7  7645.6 
+
+Coefficients: (2 not defined because of singularities)
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      3107.53     634.66   4.896 1.65e-06 ***
+carat           10541.75     207.24  50.866  < 2e-16 ***
+color            -760.32      47.35 -16.059  < 2e-16 ***
+clarity          -674.02      55.13 -12.225  < 2e-16 ***
+cutNot Ideal     -579.62     174.99  -3.312 0.001046 ** 
+channelInternet  -837.13     482.03  -1.737 0.083535 .  
+channelMall      3208.80     752.40   4.265 2.73e-05 ***
+storeAusmans      737.35     804.98   0.916 0.360461    
+storeBlue Nile    419.83     197.42   2.127 0.034320 *  
+storeChalmers    -548.40     744.84  -0.736 0.462180    
+storeDanford     -339.33     744.25  -0.456 0.648784    
+storeFred Meyer -2736.42     734.95  -3.723 0.000237 ***
+storeGoodmans    2567.42     707.39   3.629 0.000337 ***
+storeKay          -63.81     732.76  -0.087 0.930671    
+storeR. Holland  -775.07     812.49  -0.954 0.340934    
+storeRiddles      174.95     761.55   0.230 0.818468    
+storeUniversity       NA         NA      NA       NA    
+storeZales            NA         NA      NA       NA    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1332 on 282 degrees of freedom
+Multiple R-squared:  0.9105,	Adjusted R-squared:  0.9057 
+F-statistic: 191.2 on 15 and 282 DF,  p-value: < 2.2e-16
+

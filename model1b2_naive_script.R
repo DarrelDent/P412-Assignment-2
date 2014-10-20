@@ -1,0 +1,1 @@
+model1b2.naive <- step(model1b.naive)
