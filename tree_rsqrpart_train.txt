@@ -1,0 +1,20 @@
+
+Regression tree:
+rpart(formula = price ~ carat + color + clarity + cut + channel + 
+    store, data = train.tmsalary)
+
+Variables actually used in tree construction:
+[1] carat   clarity color  
+
+Root node error: 5590172446/298 = 18758968
+
+n= 298 
+
+        CP nsplit rel error  xerror     xstd
+1 0.600807      0   1.00000 1.00728 0.133374
+2 0.110671      1   0.39919 0.40635 0.050671
+3 0.104242      2   0.28852 0.35989 0.051621
+4 0.037675      3   0.18428 0.19459 0.029928
+5 0.021312      4   0.14661 0.17888 0.027634
+6 0.012115      5   0.12529 0.15749 0.025330
+7 0.010000      6   0.11318 0.14559 0.025161

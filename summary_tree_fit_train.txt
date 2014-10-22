@@ -1,0 +1,116 @@
+Call:
+rpart(formula = price ~ carat + color + clarity + cut + channel + 
+    store, data = train.tmsalary)
+  n= 298 
+
+          CP nsplit rel error    xerror       xstd
+1 0.60080676      0 1.0000000 1.0072766 0.13337366
+2 0.11067082      1 0.3991932 0.4063509 0.05067125
+3 0.10424212      2 0.2885224 0.3598887 0.05162097
+4 0.03767454      3 0.1842803 0.1945886 0.02992800
+5 0.02131223      4 0.1466058 0.1788752 0.02763418
+6 0.01211542      5 0.1252935 0.1574853 0.02533026
+7 0.01000000      6 0.1131781 0.1455927 0.02516147
+
+Variable importance
+  carat   color clarity   store     cut 
+     83       7       4       4       1 
+
+Node number 1: 298 observations,    complexity param=0.6008068
+  mean=6345.141, MSE=1.875897e+07 
+  left son=2 (240 obs) right son=3 (58 obs)
+  Primary splits:
+      carat   < 1.44  to the left,     improve=0.60080680, (0 missing)
+      store   splits as  RLLLLLLLLLLL, improve=0.03959505, (0 missing)
+      clarity < 7.5   to the right,    improve=0.02526855, (0 missing)
+      channel splits as  LRL,          improve=0.02087247, (0 missing)
+      cut     splits as  LR,           improve=0.01393362, (0 missing)
+
+Node number 2: 240 observations,    complexity param=0.1106708
+  mean=4694.775, MSE=4937190 
+  left son=4 (102 obs) right son=5 (138 obs)
+  Primary splits:
+      carat   < 0.865 to the left,     improve=0.522116300, (0 missing)
+      store   splits as  RRLRLLRRRLLR, improve=0.032220260, (0 missing)
+      clarity < 4.5   to the right,    improve=0.029932830, (0 missing)
+      color   < 1.5   to the right,    improve=0.018924980, (0 missing)
+      channel splits as  RLL,          improve=0.005156598, (0 missing)
+  Surrogate splits:
+      cut     splits as  LR,           agree=0.633, adj=0.137, (0 split)
+      color   < 4.5   to the left,     agree=0.621, adj=0.108, (0 split)
+      store   splits as  RRRRLRRRLLRL, agree=0.617, adj=0.098, (0 split)
+      clarity < 3.5   to the left,     agree=0.600, adj=0.059, (0 split)
+      channel splits as  RRL,          agree=0.592, adj=0.039, (0 split)
+
+Node number 3: 58 observations,    complexity param=0.1042421
+  mean=13174.24, MSE=1.804541e+07 
+  left son=6 (36 obs) right son=7 (22 obs)
+  Primary splits:
+      carat   < 1.735 to the left,     improve=0.556767400, (0 missing)
+      color   < 2.5   to the right,    improve=0.299635000, (0 missing)
+      clarity < 7.5   to the right,    improve=0.089575730, (0 missing)
+      store   splits as  L-R-LL-RL---, improve=0.042258330, (0 missing)
+      cut     splits as  LR,           improve=0.001000575, (0 missing)
+  Surrogate splits:
+      color < 2.5   to the right,    agree=0.707, adj=0.227, (0 split)
+      store splits as  L-L-LR-LL---, agree=0.638, adj=0.045, (0 split)
+
+Node number 4: 102 observations,    complexity param=0.01211542
+  mean=2827.265, MSE=1406987 
+  left son=8 (40 obs) right son=9 (62 obs)
+  Primary splits:
+      carat   < 0.6   to the left,     improve=0.471925400, (0 missing)
+      store   splits as  L-LRLLRRRLLR, improve=0.320354800, (0 missing)
+      channel splits as  RLR,          improve=0.166286400, (0 missing)
+      clarity < 5.5   to the left,     improve=0.063171320, (0 missing)
+      color   < 3.5   to the right,    improve=0.007251447, (0 missing)
+  Surrogate splits:
+      clarity < 5.5   to the left,     agree=0.618, adj=0.025, (0 split)
+      store   splits as  R-RRRLRRRRRR, agree=0.618, adj=0.025, (0 split)
+
+Node number 5: 138 observations,    complexity param=0.02131223
+  mean=6075.109, MSE=3063361 
+  left son=10 (99 obs) right son=11 (39 obs)
+  Primary splits:
+      clarity < 5.5   to the right,    improve=0.28182320, (0 missing)
+      color   < 5.5   to the right,    improve=0.19575750, (0 missing)
+      cut     splits as  RL,           improve=0.11406810, (0 missing)
+      carat   < 1.165 to the left,     improve=0.09165396, (0 missing)
+      store   splits as  RLRRLLRRRLLR, improve=0.02867906, (0 missing)
+  Surrogate splits:
+      carat < 1.165 to the left,  agree=0.732, adj=0.051, (0 split)
+
+Node number 6: 36 observations
+  mean=10696.36, MSE=2793629 
+
+Node number 7: 22 observations,    complexity param=0.03767454
+  mean=17228.95, MSE=1.651507e+07 
+  left son=14 (12 obs) right son=15 (10 obs)
+  Primary splits:
+      color   < 4.5   to the right,    improve=0.5796557, (0 missing)
+      store   splits as  L-R--L------, improve=0.4739752, (0 missing)
+      carat   < 2.005 to the right,    improve=0.4718771, (0 missing)
+      clarity < 5.5   to the right,    improve=0.1048312, (0 missing)
+  Surrogate splits:
+      carat   < 2.005 to the right,    agree=0.909, adj=0.8, (0 split)
+      store   splits as  L-R--L------, agree=0.818, adj=0.6, (0 split)
+      clarity < 4.5   to the right,    agree=0.682, adj=0.3, (0 split)
+
+Node number 8: 40 observations
+  mean=1812.775, MSE=405774.6 
+
+Node number 9: 62 observations
+  mean=3481.774, MSE=960555.3 
+
+Node number 10: 99 observations
+  mean=5491.929, MSE=1915722 
+
+Node number 11: 39 observations
+  mean=7555.487, MSE=2921752 
+
+Node number 14: 12 observations
+  mean=14404.5, MSE=6701296 
+
+Node number 15: 10 observations
+  mean=20618.3, MSE=7230876 
+
